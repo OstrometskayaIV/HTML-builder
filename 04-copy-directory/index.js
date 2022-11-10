@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-fs.rmdir(path.join(__dirname, 'files-copy'), {recursive: true}, err => {
+fs.rmdir(path.join(__dirname, 'files-copy'), {recursive: true, force: true}, err => {
     if (err) throw err;
     copyDir();
 });
